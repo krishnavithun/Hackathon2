@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    <title>Kaprekar's Number</title>
+    <style>
+        body {
+            font-family: 'Piedra', cursive;
+            background-color: yellow;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+
+        #num{
+            border: 3px solid black;
+           border-radius: 8px;
+           color:black;
+           letter-spacing: 1.5px;
+           font-family: 'Piedra', cursive;
+           background-color:white;
+        }
+
+       button{
+           border: 3px solid black;
+           border-radius: 8px;
+           color:black;
+           letter-spacing: 1.5px;
+           font-family: 'Piedra', cursive;
+           background-color:goldenrod;
+       }
+      
+
+       
+    </style>
+</head>
+
+<body>
+
+    <h1>Kaprekar's constant</h1>
+    <br>
+    <br>
+    <form>
+        <label for="fname">Enter the Number</label><br>
+        <input type="number" id="num" name="num"placeholder="6174"><br>
+        <br>
+        <button type="button" onclick="getInputValue();">Check</button>
+        
+    </form>
+    <script src="Kap.js"></script>
+</body>
+
+</html>
