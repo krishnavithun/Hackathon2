@@ -12,6 +12,14 @@
             background-color: yellow;
             letter-spacing: 3px;
             text-align: center;
+            color:black;
+        }
+        .heading{
+            font-family: 'Piedra', cursive;
+            
+            letter-spacing: 3px;
+            text-align: center;
+            color:black;
         }
 
         #num{
@@ -31,6 +39,53 @@
            font-family: 'Piedra', cursive;
            background-color:goldenrod;
        }
+
+
+       #dialogoverlay {
+            display: none;
+            opacity: .8;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: #FFF;
+            width: 100%;
+            z-index: 10;
+        }
+        
+        #dialogbox {
+            display: none;
+            position: fixed;
+            background: #000;
+            border-radius: 7px;
+            width: 550px;
+            z-index: 10;
+        }
+        
+        #dialogbox>div {
+            background: #FFF;
+            margin: 8px;
+        }
+        
+        #dialogbox>div>#dialogboxhead {
+            background:orange;
+            font-size: 19px;
+            padding: 10px;
+            color: black;
+        }
+        
+        #dialogbox>div>#dialogboxbody {
+            background:yellowgreen;
+            padding: 20px;
+            color: black;
+            letter-spacing: 2px;
+        }
+        
+        #dialogbox>div>#dialogboxfoot {
+            background: white;
+            padding: 10px;
+            text-align: right;
+            color:black;
+        }
       
 
        
@@ -39,16 +94,11 @@
 
 <body>
 
-    <h1>Kaprekar's constant</h1>
-    <br>
-    <br>
-    <form>
-        <label for="fname">Enter the Number</label><br>
-        <input type="number" id="num" name="num"placeholder="6174"><br>
-        <br>
-        <button type="button" onclick="getInputValue();">Check</button>
+    <div id="dialogoverlay"></div>
+    
+    
+    <div id="heading"></div>
         
-    </form>
     <script src="Kap.js"></script>
 </body>
 
