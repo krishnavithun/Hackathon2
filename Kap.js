@@ -1,3 +1,44 @@
+function CustomAlert() {
+    this.render = function () {
+        var winW = window.innerWidth;
+        var winH = window.innerHeight;
+        var dialogoverlay = document.getElementById('dialogoverlay');
+        var dialogbox = document.getElementById('dialogbox');
+        dialogoverlay.style.display = "block";
+        dialogoverlay.style.height = String(winH) + "px";
+        dialogbox.style.left = String((winW / 2) - (550 * .5)) + "px";
+        dialogbox.style.top = "100px";
+        dialogbox.style.display = "block";
+        document.getElementById('dialogboxfoot').innerHTML += '<button class="button" onclick="Alert.ok()">Yes!</button>';
+    };
+    this.ok = function () {
+        document.getElementById('dialogbox').style.display = "none";
+        document.getElementById('dialogoverlay').style.display = "none";
+    };
+}
+var Alert = new CustomAlert();
+
+var cont=document.createElement("div");
+cont.setAttribute("class","container");
+cont.innerHTML="\n <div id=\"dialogbox\"> <div> <div id=\"dialogboxhead\">Shall we learn About Kaprekar's Number!</div> <div id=\"dialogboxbody\">The number 6174 is called the Kaprekar number.<br> The Indian mathematician D.R.Kaprekar made the following discovery in 1949.<br> (1) Take a four-digit number with different digits(abcd)<br> (2) Form the largest and the smallest number from these four digits (dcba and abcd).<br>  (3) Find the difference between these digits. Maybe this is 6174 (dcba - abcd = 6174?).<br> </div> <div id=\"dialogboxfoot\" class=\"text-white\">Are You Ready to Play with it?</div></div></div>"; 
+document.body.appendChild(cont);
+
+
+window.onload = () => {
+    localStorage.clear();
+var container=document.createElement("div");
+container.setAttribute("class","container");
+container.innerHTML="\n <h1>Generate Kaprekar's Number</h1> <br> <br>  <label for=\"fname\">Enter the Number</label><br> <input type=\"number\" id=\"num\" name=\"num\"placeholder=\"6174\"> <br><br> <button type=\"button\" onclick=\"getInputValue();\">Check</button> ";
+document.body.appendChild(container);
+
+
+
+Alert.render();
+
+
+
+
+
 function getInputValue() {
     // Selecting the input element and get its value 
     var x = document.getElementById("num").value;
@@ -54,4 +95,5 @@ function getInputValue() {
     }
 
 }
-
+   
+};
