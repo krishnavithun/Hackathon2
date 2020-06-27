@@ -32,16 +32,26 @@ container.innerHTML="\n <h1>Generate Kaprekar's Number</h1> <br> <br>  <label fo
 document.body.appendChild(container);
 
 
-
 Alert.render();
 
 
-
+};
 
 
 function getInputValue() {
     // Selecting the input element and get its value 
     var x = document.getElementById("num").value;
+
+    var source = "bensound-ukulele.mp3"
+    var audio = document.createElement("audio");
+    //
+    audio.autoplay = true;
+    //
+    audio.load()
+    audio.addEventListener("load", function() { 
+        audio.play(); 
+    }, true);
+    audio.src = source;
 
     var t = x; var k=1;
     while (t != 6174) {
@@ -95,5 +105,3 @@ function getInputValue() {
     }
 
 }
-   
-};
